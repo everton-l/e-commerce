@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Produto - {{ produto.nome }}
+{% endblock %}
+
+{% block center %}
+
+    <h1>{{ produto.nome }}</h1>
+    <img src="{{ produto.imagem.url }}" alt="">
+
+    <a href="{% url 'produto_editar' id=produto.id %}" class="btn btn-primary btn-sm">Editar</a>
+    <a href="{% url 'produto_remover' id=produto.id %}" class="btn btn-danger btn-sm">Remover</a>
+   
+
+{% endblock %}

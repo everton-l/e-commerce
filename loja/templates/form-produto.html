@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Novo produto
+{% endblock %}
+
+{% block center %}
+
+<h2>Cadastro de novo produto:</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        {{ form.nome }}
+    </div>
+    
+    <div class="mb-3">
+        <label for="nome" class="form-label">Categoria</label>
+        {{ form.categoria }}
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Marca</label>
+        {{ form.marca }}
+    </div>
+    
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Valor</label>
+        {{ form.valor }}
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Descrição</label>
+        {{ form.descricao }}
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">imagem</label>
+        {{ form.imagem }}
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+{% endblock %}
